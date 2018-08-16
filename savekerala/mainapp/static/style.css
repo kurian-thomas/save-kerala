@@ -3,8 +3,8 @@ h1{
 	color: white;
 }
 
-body{
-	background: #006600;
+.bod{
+	background: #001942;;
 }
 
 .h{
@@ -16,4 +16,8 @@ body{
 
 td, th{
 	padding:2vh !important;
+}
+
+.cl{
+	color: white;
 }

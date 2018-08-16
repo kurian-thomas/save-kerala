@@ -10,7 +10,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="{% static 'jav.js' %}"></script>
 </head>
-<body>
+<body class="bod">
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
@@ -26,6 +26,7 @@
 				<ul class="nav navbar-nav">
 					<li class="homefont {% block helplinenumbers %}{% endblock %}" ><a href="{% url 'mainapp:helplinenumbers' %}">HELPLINE NUMBERS</a></li>
 					<li class="homefont {% block disastercamps %}{% endblock %}" ><a href="{% url 'mainapp:disastercamps' %}">DISASTER CAMPS</a></li>
+					<li class="homefont"><a href="#">FLOOD MAPS</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

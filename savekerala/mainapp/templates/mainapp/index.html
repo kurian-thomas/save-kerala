@@ -2,21 +2,21 @@
 {% extends 'mainapp/base.html' %}
 {% block body %}
 	<div class="h">
-		<h1 >UPLOAD NEWS HERE</h1>
+		<h1 class="cl">UPLOAD NEWS HERE</h1>
 	</div>
 
 	<div class="h">
-		<label for="user">type news here</label> 
+		<label for="user" class="cl">type news here</label> 
 		<br>
 		<textarea row="50" cols="45"></textarea>
 		<br>
-		<label for="doc"> upload supporting documents/images </label>
-		<input type="file" name="docs" id="doc" accept="image/*">
+		<label for="doc" class="cl"> upload supporting documents/images </label>
+		<input type="file" name="docs" id="doc" accept="image/*" style="color: white;">
 		<br>
 		<button>upload</button>
 	</div>
 	<br>
-	<p style="font-size: 200%;">
+	<p style="font-size: 200%;" class="cl">
 	CURRENTLY UPLOADED NEWS :
 	</p>
 {% endblock %}

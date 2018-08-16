@@ -2,20 +2,23 @@
 {% load staticfiles %}
 
 {% block body  %}
-	<h1>UPLOAD NUMBERS HERE </h1>
-	<form action="{% url 'mainapp:helplinenumbers' %}" method="post">
+	<h1 class="cl">UPLOAD NUMBERS HERE </h1>
+	<form action="{% url 'mainapp:helplinenumbers' %}" method="post" class="cl">
 		{% csrf_token %}
 		{{ form }}
-		<input type="submit" value="Submit" />
+		<input type="submit" value="Submit" style="color: black;" />
 	</form>
-	<p style="font-size: 200%;">UPLOADED NUMBERS:</p>
-	<table border="1" class="helplinenumberstable">
-		<tr>
+	<br>
+	<br>
+	
+	<p style="font-size: 200%;" class="cl">UPLOADED NUMBERS:</p>
+	<table border="1" class="helplinenumberstable" >
+		<tr class="cl">
 			<th>NAME</th>
 			<th>NUMBER</th>
 		</tr>
 		{% for i in all_helplinenumber %}
-			<tr>
+			<tr class="cl">
 				<td>{{ i.name }}</td>
 				<td>{{ i.phonenumber }}</td>
 			</tr>
