@@ -3,12 +3,10 @@
 
 {% block body  %}
 	<h1>UPLOAD NUMBERS HERE </h1>
-	<br>
-	<label>number:
-		<input type="text" name="numb">
-	</label>
-	<button>add</button>
-	<br>
-	<br>
+	<form action="{% url 'mainapp:helplinenumbers' %}" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" value="Submit" />
+	</form>
 	<p style="font-size: 200%;">UPLOADED NUMBERS:</p>
 {% endblock %}

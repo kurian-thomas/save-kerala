@@ -4,6 +4,7 @@ from django.http import HttpResponse,JsonResponse
 
 from django.views import View
 
+from .forms import *
 from .models import *
 
 def home(request):
@@ -12,7 +13,19 @@ def home(request):
 
 def helplinenumbers(request):
 	data={}
-	return render(request,'mainapp/no.html',data)
+	all_helplinenumber=helplinenumber.objects.all()
+	data[all_helplinenumber]=all_helplinenumber
+	if request.method == 'POST':
+		form = helplinenumberForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('/helplinenumbers')
+		else:
+			return redirect('home')
+	else:
+		form=helplinenumberForm()
+		data['form']=form
+		return render(request,'mainapp/no.html',data)
 
 def disastercamps(request):
 	data={}
