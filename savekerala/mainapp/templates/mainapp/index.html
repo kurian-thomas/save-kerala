@@ -1,0 +1,22 @@
+
+{% extends 'mainapp/base.html' %}
+{% block body %}
+	<div class="h">
+		<h1 >UPLOAD NEWS HERE</h1>
+	</div>
+
+	<div class="h">
+		<label for="user">type news here</label> 
+		<br>
+		<textarea row="50" cols="45"></textarea>
+		<br>
+		<label for="doc"> upload supporting documents/images </label>
+		<input type="file" name="docs" id="doc" accept="image/*">
+		<br>
+		<button>upload</button>
+	</div>
+	<br>
+	<p style="font-size: 200%;">
+	CURRENTLY UPLOADED NEWS :
+	</p>
+{% endblock %}
