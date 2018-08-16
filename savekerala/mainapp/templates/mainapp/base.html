@@ -26,7 +26,7 @@
 				<ul class="nav navbar-nav">
 					<li class="homefont {% block helplinenumbers %}{% endblock %}" ><a href="{% url 'mainapp:helplinenumbers' %}">HELPLINE NUMBERS</a></li>
 					<li class="homefont {% block disastercamps %}{% endblock %}" ><a href="{% url 'mainapp:disastercamps' %}">DISASTER CAMPS</a></li>
-					<li class="homefont"><a href="#">FLOOD MAPS</a></li>
+					<li class="homefont {% block floodmaps %}{% endblock %}"><a href="{% url 'mainapp:floodmaps' %}">FLOOD MAPS</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

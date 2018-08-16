@@ -8,5 +8,6 @@ class helplinenumber(models.Model):
 		return self.name
 class news(models.Model):
 	desc=models.CharField(max_length=25500,blank=True)
+	photo=models.FileField(blank=True)
 	def __str__(self):
 		return self.desc

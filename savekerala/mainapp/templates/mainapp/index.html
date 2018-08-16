@@ -1,5 +1,6 @@
 
 {% extends 'mainapp/base.html' %}
+{% block home %}active{%  endblock %}
 {% block body %}
 	<div class="h">
 		<h1 class="cl">UPLOAD NEWS HERE</h1>
@@ -16,6 +17,11 @@
 		<button>upload</button>
 	</div>
 	<br>
+	<!-- <form action="{% url 'mainapp:home' %}" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" value="Submit" style="color: black;" />
+	</form> -->
 	<p style="font-size: 200%;" class="cl">
 	CURRENTLY UPLOADED NEWS :
 	</p>

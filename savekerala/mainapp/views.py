@@ -9,13 +9,24 @@ from .models import *
 
 def home(request):
 	data={}
-	return render(request,'mainapp/index.html',data)
+	all_news=news.objects.all()
+	data['all_news']=all_news
+	if request.method == 'POST':
+		form=newsForm(request.POST,request.FILES)
+		print(request.FILES)
+		if form.is_valid():
+			form.save()
+			return redirect('/home')
+		else:
+			return redirect('/helplinenumbers')
+	else:
+		form=newsForm()
+		data['form']=form
+		return render(request,'mainapp/index.html',data)
 
 def helplinenumbers(request):
 	data={}
 	all_helplinenumber=helplinenumber.objects.all()
-	for i in all_helplinenumber:
-		print(i)
 	data['all_helplinenumber']=all_helplinenumber
 	if request.method == 'POST':
 		form = helplinenumberForm(request.POST)
@@ -23,7 +34,7 @@ def helplinenumbers(request):
 			form.save()
 			return redirect('/helplinenumbers')
 		else:
-			return redirect('home')
+			return redirect('/home')
 	else:
 		form=helplinenumberForm()
 		data['form']=form
@@ -32,3 +43,7 @@ def helplinenumbers(request):
 def disastercamps(request):
 	data={}
 	return render(request,'mainapp/disaster.html',data)
+
+def floodmaps(request):
+	data={}
+	return render(request,'mainapp/floodmaps.html',data)
