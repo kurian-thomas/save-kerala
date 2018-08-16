@@ -14,7 +14,9 @@ def home(request):
 def helplinenumbers(request):
 	data={}
 	all_helplinenumber=helplinenumber.objects.all()
-	data[all_helplinenumber]=all_helplinenumber
+	for i in all_helplinenumber:
+		print(i)
+	data['all_helplinenumber']=all_helplinenumber
 	if request.method == 'POST':
 		form = helplinenumberForm(request.POST)
 		if form.is_valid():

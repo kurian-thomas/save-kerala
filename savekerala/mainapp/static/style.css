@@ -10,3 +10,10 @@ body{
 .h{
 	margin-left: 35%;
 }
+.helplinenumberstable{
+	width:100%;
+}
+
+td, th{
+	padding:2vh !important;
+}

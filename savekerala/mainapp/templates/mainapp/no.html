@@ -9,4 +9,16 @@
 		<input type="submit" value="Submit" />
 	</form>
 	<p style="font-size: 200%;">UPLOADED NUMBERS:</p>
+	<table border="1" class="helplinenumberstable">
+		<tr>
+			<th>NAME</th>
+			<th>NUMBER</th>
+		</tr>
+		{% for i in all_helplinenumber %}
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.phonenumber }}</td>
+			</tr>
+		{% endfor %}
+	</table>
 {% endblock %}
