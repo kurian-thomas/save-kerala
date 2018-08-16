@@ -2,16 +2,36 @@
 {% extends 'mainapp/base.html' %}
 {% block home %}active{%  endblock %}
 {% block body %}
+	<!-- <div >
+		<h1 class="d" style="display: inline;">DO</h1>
+		<h1 class="topic">FOR KERALA.</h1>
+		
+	</div> -->
+	<!-- <hr> -->
+	<p class="cl" style="font-size: 150%;font-style: italic;">
+		This site aims at filtering the fake news from the real ones.Kerala
+		is facing a crisis and we need the help of all the people in kerala to help 
+		this site with data.
+	</p>
+	<p class="cl" style="font-size: 150%;font-style: italic;">
+		anyone can upload relavent news,warnings,helplines numbers,relief camp addressess here or even attach social meadia spread news.Users can then upvote or downvote on them and use the ratings to authenticate the news. 
+
+		
+	</p>
+	<br>
+	<br>
 	<div class="h">
-		<h1 class="cl">UPLOAD NEWS HERE</h1>
+		<h2 class="cl">UPLOAD NEWS HERE</h1>
 	</div>
 
 	<div class="h">
-		<label for="user" class="cl">type news here</label> 
+		<label for="user" class="cl">Type news here:</label> 
 		<br>
 		<textarea row="50" cols="45"></textarea>
 		<br>
-		<label for="doc" class="cl"> upload supporting documents/images </label>
+		<br>
+		<br>
+		<label for="doc" class="cl"> Upload supporting documents/images </label>
 		<input type="file" name="docs" id="doc" accept="image/*" style="color: white;">
 		<br>
 		<button>upload</button>

@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
 <head>
-	<title> real news </title>
+	<title> DO FOR KERALA:authenticate news </title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -25,8 +25,9 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class="homefont {% block helplinenumbers %}{% endblock %}" ><a href="{% url 'mainapp:helplinenumbers' %}">HELPLINE NUMBERS</a></li>
-					<li class="homefont {% block disastercamps %}{% endblock %}" ><a href="{% url 'mainapp:disastercamps' %}">DISASTER CAMPS</a></li>
+					<li class="homefont {% block disastercamps %}{% endblock %}" ><a href="{% url 'mainapp:disastercamps' %}">RELIEF CAMPS</a></li>
 					<li class="homefont {% block floodmaps %}{% endblock %}"><a href="{% url 'mainapp:floodmaps' %}">FLOOD MAPS</a></li>
+					<li><a href="#">FOOD COLLECTION POINTS</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -35,7 +36,13 @@
 			</div>
 		</div>
 	</nav>
-	
+	<div class="container">
+		<div >
+		<h1 class="d" style="display: inline;">DO</h1>
+		<h1 class="topic">FOR KERALA.</h1>
+		</div>
+		<hr>
+	</div>	
 	<div class="container">
 		{% block body %}
 		{% endblock %}

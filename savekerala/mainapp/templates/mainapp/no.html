@@ -2,8 +2,11 @@
 {% load staticfiles %}
 {% block helplinenumbers %}active{%  endblock %}
 {% block body  %}
-	<h1 class="cl">UPLOAD NUMBERS HERE </h1>
-	<form action="{% url 'mainapp:helplinenumbers' %}" method="post" class="cl">
+	<h2 class="cl" style="font-style: italic;">UPLOAD HELPLINE NUMBERS HERE </h1>
+	<br>
+	<br>
+<!-- 	<p class="cl" style="font-size: 150%;font-style: italic;">Upload helpline numbers here</p>
+ -->	<form action="{% url 'mainapp:helplinenumbers' %}" method="post" class="cl">
 		{% csrf_token %}
 		{{ form }}
 		<input type="submit" value="Submit" style="color: black;" />
@@ -12,7 +15,7 @@
 	<br>
 	
 	<p style="font-size: 200%;" class="cl">UPLOADED NUMBERS:</p>
-	<table border="1" class="helplinenumberstable" >
+	<table border="1" bordercolor="WHITE" class="helplinenumberstable" >
 		<tr class="cl">
 			<th>NAME</th>
 			<th>NUMBER</th>
